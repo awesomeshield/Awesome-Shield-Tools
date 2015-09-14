@@ -29,6 +29,7 @@ void loop() {
   delay(500);
   awesome.LED.turnOn(BLUE);
   delay(500);
+  awesome.LED.turnOff();
   Serial.println("temp reading: ");
   Serial.println(awesome.temperatureSensor.reading());
   Serial.println("light reading: ");
@@ -36,15 +37,22 @@ void loop() {
   Serial.println("knob: ");
   Serial.println(awesome.knob.reading());
   Serial.println("waiting for button press...");
+  awesome.LED.turnOn(RED);
   while ( ! awesome.button.isDown() ) {
     //
   }
+  awesome.LED.turnOn(GREEN);
   Serial.println("Button is working.");
+  delay(350);
+  awesome.LED.turnOff();
+  awesome.LED.turnOn(RED);
   Serial.println("waiting for switch state change ...");
   bool initialSwitchState = awesome.toggleSwitch.isOn();
   while ( awesome.toggleSwitch.isOn() == initialSwitchState ) {
     //
   }
+  awesome.LED.turnOn(GREEN);
   Serial.println("Toggle switch is working.");
-
+  delay(350);
+  awesome.LED.turnOff();
 }
