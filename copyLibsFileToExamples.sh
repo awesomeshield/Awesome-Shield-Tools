@@ -1,1 +1,1 @@
-echo ~/Dropbox/WC/Awesome-Shield-Library/examples/*/*/ | xargs -n 1 cp ~/Dropbox/WC/Awesome-Shield-Library/examples/new-sketch/libraries.ino
+echo ~/Dropbox/WC/Awesome/examples/*/*/ | xargs -n 1 cp ~/Dropbox/WC/Awesome/examples/new-sketch/libraries.ino
